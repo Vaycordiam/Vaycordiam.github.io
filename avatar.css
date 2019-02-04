@@ -1,0 +1,40 @@
+body{
+       font-family: "Marker Felt", "Comic Sans MS", fantasy;
+ 	color: #ffffff;
+    }
+
+aside {
+  float: right;
+  width: 37%;
+  height: 500px;
+  background: #ccc;
+  padding: 20px;
+  background-color: #000000
+  
+}
+
+article{
+       float: left;
+       width: 60%;
+       height: 500px;
+       background-image: url(milky-way-2695569_960_720.jpg)
+       
+}
+@media (max-width: 600px) {
+  article, aside {
+    width: 100%;
+    height: auto;
+  }
+}
+header{ 
+       background-color: #000000
+}
+html{
+    background-color: #000000
+}
+footer{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
