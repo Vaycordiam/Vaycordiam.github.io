@@ -1,0 +1,50 @@
+<body onload=display_ct();>
+<span id='ct' ></span>
+<script type="text/javascript">
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var suffix = "AM";  // use AM by default
+  var seconds = now.getSeconds();
+  var time = now.getHours() + ':' + now.getMinutes()
+  var months = ['January', 'February', '...'];
+  var date = "";
+  
+  function display_c(){
+    var refresh=1000; // Refresh rate in milli seconds
+    var mytime=setTimeout('display_ct()',refresh);
+  }
+  function display_ct() {
+    var x = new Date()
+    document.getElementById('ct').innerHTML = x;
+    display_c();
+  }
+  if (minutes < 10)
+    minutes = "0" + minutes;
+
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+    hours = 12;
+  }
+  
+   //document.write(Date());
+   function hideElement(id_attribute_value) {
+	  		  if (document.getElementById && document.getElementById(id_attribute_value) && document.getElementById(id_attribute_value).style) 
+	  		  {
+                    document.getElementById(id_attribute_value).style.visibility = "hidden";
+		  	  };
+	  		}
+	function showElement(id_attribute_value) {
+	  		  if (document.getElementById && document.getElementById(id_attribute_value) && document.getElementById(id_attribute_value).style) 
+	  		  {
+                    document.getElementById(id_attribute_value).style.visibility = "visible";
+		  	  };
+	  		}  		
+    </script>
+    <button div id = 'd2' type="button" onclick="hideElement('x') & hideElement('d2') & showElement('d3');">Magic Trick</button>
+    <button div id = 'd3' type="button" onclick="showElement('x') & hideElement('d3') & showElement('d2');" visibility = "hidden">Reverse the Trick</button>
+    
+</body>
