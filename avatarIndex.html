@@ -6,7 +6,12 @@
        </head>
        <body>
            <h1>
-               
+               <script type="text/javascript">
+                   function print()
+                   {
+                       document.write("Look at URL!")
+                   }
+               </script>
           </h1>
           <p>
                 <br>
@@ -19,36 +24,12 @@
                         <label for = "lastName">Last Name: </label>
                         <input type="text" name="lastname" ><div id = "lastName"></div>
                         <br>
-                        <button type "submit" onclick = 'hideElement("firstName") & hideElement("lastName") & hideElement("button1") & saveName();'>Enter</button><div id = "button1"></div>
+                        <button type "submit" onclick = 'print()'>Enter</button><div id = "button1"></div>
                 	</pre>
                 	<p id = "demo"></p>
                 <form action="avatar.html">
                     <button type="button" value="Go back">Back</button>
                 </form>
-                <script type = "text/javascript">
-           function saveName()
-           {
-               var first = document.getElementById(firstName).value;
-               var last = document.getElementById(lastName).value;
-               //var first = f;
-               //var last = l;
-               document.getElementById('demo').innerHTML = "Hello " + first + " " + last + "! Welcome to Warren High School.";
-                      
-               //document.write("Hello " + first + " " + last + "! Welcome to Warren High School.");
-           }
-           function hideElement(id_attribute_value) {
-	  		  if (document.getElementById && document.getElementById(id_attribute_value) && document.getElementById(id_attribute_value).style) 
-	  		  {
-                    document.getElementById(id_attribute_value).style.visibility = "hidden";
-		  	  };
-	  		}
-        	function showElement(id_attribute_value) {
-	  		  if (document.getElementById && document.getElementById(id_attribute_value) && document.getElementById(id_attribute_value).style) 
-	  		  {
-                    document.getElementById(id_attribute_value).style.visibility = "visible";
-		  	  };
-	  		}  		
-           </script>
           </p>
       </body>
   </html>
