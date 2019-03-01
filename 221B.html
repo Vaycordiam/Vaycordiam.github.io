@@ -24,8 +24,9 @@ Version 12/19/2013
 		function initPopout()
 		{
 			var thumb1 = document.getElementById("image1"); 
-			
+			var thumb2 = document.getElementById("image2");
 			thumb1.onmouseover = showDetailedView;
+			thumb2.onmouseover = showDetailedView;
 		}
 
 		function showDetailedView()
@@ -34,7 +35,12 @@ Version 12/19/2013
 			im1.id = "img1popout";
 			im1.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic1.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Aprill Aronie<TR><TH align='left'>File Name: <TH align='left'>pic1.jpg<TR></TABLE> ";
 			var popOut = document.getElementById("img1popout");
-			popOut.onmouseout = hideDetailedView;			
+			popOut.onmouseout = hideDetailedView;
+			var im2 = document.getElementById("img2popin");
+			im2.id = "img2popout";
+			im1.innerHTML = "<br /><TABLE><TR><TH rowspan='3'><img src='aprilla/pic2.jpg' width='250'><TH align='left'>Artist's Name: <TH align='left'>Aprill Aronie<TR><TH align='left'>File Name: <TH align='left'>pic2.jpg<TR></TABLE> ";
+			var popOut2 = document.getElementById("img2popout");
+			popOut2.onmouseout = hideDetailedView;			
 		}
 
 		function hideDetailedView()
@@ -42,6 +48,9 @@ Version 12/19/2013
 			var im1 = document.getElementById("img1popout");
 			im1.id = "img1popin";
 			im1.innerHTML = "";
+			var im2 = document.getElementById("img2popout");
+			im2.id = "img2popin";
+			im2.innerHTML = "";
 		}
 	</script>
 </head>
@@ -55,7 +64,7 @@ Version 12/19/2013
 			<img id="image1" src="aprilla/pic1thumb.jpg"><div id = "img1popin"></div>
 		</td>
 		<td>
-			<img src="aprilla/pic2thumb.jpg">
+			<img id="image1" src="aprilla/pic2thumb.jpg"><div id = "img1popin"></div>
 		</td>
 		<td>
 			<img src="aprilla/pic3thumb.jpg">
